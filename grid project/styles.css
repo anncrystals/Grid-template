@@ -1,0 +1,183 @@
+body{
+    font-size: 13px;
+    background: hsl(210, 46, 95);
+}
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.box-info-grid{
+    /* display: grid; */
+    /* grid-template-columns: auto; */
+    background: hsl(0, 0%, 90%);
+}
+.first-grid{
+background:#733fc7;
+border-radius: 10px;
+box-shadow: 0 10 20 rgb(0, 0, 0, 0.3);
+padding: 30px 40px;
+
+
+}
+.second-grid{
+    background: #49556b;
+    border-radius: 10px;
+    box-shadow: 0 10 20 rgb(0, 0, 0, 0.3);
+padding: 30px 40px;
+
+} 
+.third-grid{
+    background: #fefefa;
+
+    border-radius: 10px;
+    box-shadow: 0 10 20 rgb(0, 0, 0, 0.3);
+padding: 30px 40px;
+
+}
+.fourth-grid{
+    background: #18202d;
+    border-radius: 10px;
+    box-shadow: 0 10 20 rgb(0, 0, 0, 0.3);
+padding: 30px 40px;
+
+}
+.fifth-grid{
+    background:#fefefa;
+    border-radius: 10px;
+    box-shadow: 0 10 20 rgb(0, 0, 0, 0.3);
+padding: 30px 40px;
+
+}
+.group{
+    display: grid;
+    /* grid-template-columns: repeat(4, 1fr);*/
+    gap: 1.5rem;
+    grid-template-areas: 
+    'one'
+    'two'
+    'three'
+    'four'
+    'five';
+    margin-top: 20px;
+    /* width: 100%; */
+}
+/* @media (min-width:50em) {
+    .grid-col-span-2{
+        grid-column: span 2;
+    }
+    .group{0
+        
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.5rem;
+}
+.fifth-grid:last-child{
+    background: yellow;
+    grid-column-start: 4;
+    
+    grid-row: 1/3;
+    
+please help me check this code,i do not know why its not respponsive
+}
+} */
+.first-grid:nth-child(1){
+    grid-area: one;
+}
+.second-grid:nth-child(2){
+    grid-area: two;
+}
+.third-grid:nth-child(3){
+    grid-area: three;
+}
+.fourth-grid:nth-child(4){
+    grid-area: four;
+}
+.fifth-grid:nth-child(5){
+    grid-area: five;
+}
+@media( min-width:30em){
+    .group{
+        grid-template-areas: 
+        'one one '
+        'two'
+       'three' 
+       'four four'
+       'five '     
+    }
+}
+@media( min-width:46em){
+
+    .group{
+        grid-template-areas: 
+        'one one two '
+       'three four four '  
+           
+    }
+
+    /* .fifth-grid:last-child{
+        grid-column-start: 4;
+        this css command does not seem to be displaying the last grid which is supposed to be at the bottom,please help me check it
+    } */
+}
+
+
+.grid-col-span-2{
+    grid-column: span 2;
+}
+.fifth-grid:last-child{
+    background: yellow;
+    grid-column-start: 4;
+    
+    grid-row: 1/3;
+    /* you can use the row command to increase the elasticity of the a container
+    in this particular regard,the grid-row start at 1 and grid row end at 3 or you can make use of grid-row:span 2
+    this will also give you the same result by stretching the container by 2 rows */
+
+}
+
+.first-grid{
+    background-image: url(/images/bg-pattern-quotation.svg);
+    background-repeat: no-repeat;
+    /* padding-inline: 10px; */
+    background-position: 80% 0%;
+}
+.gray{
+    color: hsl(0, 0%, 90%);
+    line-height: 1rem;
+}
+img{
+    border-radius: 50%;
+    border: 2px solid hsl(0, 0%, 81%);
+}
+.grad{
+color:#b7bbbf;
+}
+.name{
+    color: #dabbfc;
+    margin-bottom: 0px;
+}
+.bold{
+    color: #fff;
+    margin-bottom: 19px;
+}
+.bold5, .bold3{
+    color: #49556b;
+    margin-bottom: 19px;
+}
+.gray3, .gray5{
+color: hsl(0, 0%, 81%);
+line-height: 1rem;
+}
+
+.flex{
+margin-bottom: 10px;
+font-family: system-ui;
+/* display: flex; */
+
+}
+.image{
+    display: flex;
+    align-items: center;
+    gap:15px;
+    margin-bottom: 20px;
+}
